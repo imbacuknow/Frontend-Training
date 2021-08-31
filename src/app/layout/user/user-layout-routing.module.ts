@@ -1,24 +1,23 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-// import {UserLayoutModule} from './layout/user/user-layout.module';
+import {UserLayoutComponent} from './user-layout/user-layout.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: UserLayoutComponent,
     children: [
       {
         path: '',
         loadChildren: () =>
-          import('./layout/user/user-layout.module').then(
-            (m) => m.UserLayoutModule,
-          ),
+          import('src/app/modules/user/user.module').then((m) => m.UserModule),
       },
     ],
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class UserLayoutRoutingModule {}
