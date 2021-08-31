@@ -1,0 +1,35 @@
+.homepage {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* navbar */
+.homepage nav {
+  padding: 0 7%;
+}
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+  margin: 30px 0;
+}
+.menu {
+  width: 25px;
+  cursor: pointer;
+}
+
+nav div ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+nav div ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 800;
+}
+nav div ul li a:hover {
+  color: #ff5ea2;
+}
